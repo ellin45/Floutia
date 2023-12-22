@@ -2,7 +2,8 @@
 
 import {usePathname} from "next/navigation";
 import {useMemo} from "react";
-
+import variables from "../../styles/variables.module.scss";
+import styles from "../../app/styles/page.module.css";
 interface SidebarProps {
   children: React.ReactNode;
 }
@@ -13,8 +14,13 @@ const Sidebar: React.FC<SidebarProps> = ({children}) => {
     () => [
       {
         label: "Home",
-        active: pathname !== "/search",
+        active: pathname === "/",
         href: "/",
+      },
+      {
+        label: "Search",
+        active: pathname === "/search",
+        href: "/search",
       },
     ],
     []
