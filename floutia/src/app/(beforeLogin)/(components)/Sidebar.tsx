@@ -3,29 +3,27 @@
 import {usePathname} from "next/navigation";
 import {useMemo} from "react";
 import variables from "../../styles/variables.module.scss";
-import styles from "../../app/styles/page.module.css";
+import styles from "../../styles/page.module.css";
+import Image from "next/image";
+import Link from "next/link";
+
 interface SidebarProps {
   children: React.ReactNode;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({children}) => {
-  const pathname = usePathname();
-  const routes = useMemo(
-    () => [
-      {
-        label: "Home",
-        active: pathname === "/",
-        href: "/",
-      },
-      {
-        label: "Search",
-        active: pathname === "/search",
-        href: "/search",
-      },
-    ],
-    []
-  );
-  return <div>{children}hihi</div>;
-};
+import React from "react";
 
-export default Sidebar;
+export default function Sidebar() {
+  return (
+    <div className={styles.Sidebar}>
+      <div className={styles.search}>
+        <Image src="/search.png" alt="search" width={30} height={30}></Image>
+        <Link href="/search">search</Link>
+      </div>
+      <div className={styles.myPage}>
+        <Image src="/myPage.png" alt="myPage" width={30} height={30}></Image>
+        <Link href="/myPage">myPage</Link>
+      </div>
+    </div>
+  );
+}

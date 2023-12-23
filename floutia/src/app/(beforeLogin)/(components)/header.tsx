@@ -1,62 +1,26 @@
-import React from "react";
-import variables from "../../styles/variables.module.scss";
-import styles from "../../app/styles/page.module.css";
+import variables from "../../app/styles/variables.module.scss";
+import styles from "../../styles/page.module.css";
+import Image from "next/image";
 
-
-interface LoginPageProps {
-  response_type: string;
-  client_id: string;
-  scope: string;
-  redirect_uri: string;
-  state: string;
-}
-
-var client_id =
-  process.env.SPOTIFY_CLIENT_ID || "ada2b43ffdd04e2e9d32f125913a4731";
-var redirect_uri =
-  process.env.SPOTIFY_REDIRECT_URI || "http://localhost:3000/callback";
-console.log(client_id);
-console.log(redirect_uri);
-
-type SpotifyLoginUrl = string;
-
-export default function Header(props: LoginPageProps) {
-  const handleLogin = () => {
-    const state = generateRandomString(16);
-    const scope = "user-read-private user-read-email";
-
-    const queryParams = new URLSearchParams({
-      response_type: "code",
-      client_id,
-      scope,
-      redirect_uri,
-      state,
-    });
-
-    const spotifyLoginUrl: SpotifyLoginUrl = `https://accounts.spotify.com/authorize?${queryParams.toString()}`;
-
-    window.location.href = spotifyLoginUrl;
-  };
-
-  const generateRandomString = (length: number): string => {
-    const possibleChars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let result = "";
-    for (let i = 0; i < length; i++) {
-      result += possibleChars.charAt(
-        Math.floor(Math.random() * possibleChars.length)
-      );
-    }
-    return result;
-  };
-
+export default function Header() {
   return (
     <div>
-      <h1 className={styles.left}>OO님 안녕하세요!</h1>
-
-      <button onClick={handleLogin} className={styles.right}>
-        Log In
-      </button>
+      <body>
+        <header className={styles.header}>
+          <div className={styles.logo}>
+            <Image
+              src="/floutia_logo.png"
+              alt="Floutia Logo"
+              width={100}
+              height={100}
+              className={styles.logo}
+            />
+          </div>
+            <div>OO님을 위한 곡 추천</div>
+          <button>로그인</button>
+        </header>
+        
+      </body>
     </div>
   );
 }
