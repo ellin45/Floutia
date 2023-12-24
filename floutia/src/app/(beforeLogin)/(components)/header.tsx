@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <div>
-      <body>
+     
         <header className={styles.header}>
           <div className={styles.logo}>
             <Image
@@ -20,7 +20,7 @@ export default function Header() {
           <button>로그인</button>
         </header>
         
-      </body>
+  
     </div>
   );
 }
