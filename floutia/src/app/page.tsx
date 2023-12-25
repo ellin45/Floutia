@@ -6,12 +6,17 @@ import Sidebar from "./(beforeLogin)/(components)/Sidebar";
 import MainCircle from "./(beforeLogin)/(components)/mainCircle";
 import Template from "./(beforeLogin)/(components)/Template";
 import {Children} from "react";
+
 export default function Main() {
   return (
     <>
-      <Header />
-      <Sidebar />
-      <MainCircle />
+      <div className={styles.main}>
+        <Header />
+        <div className={styles.mainCircle}>
+        <Sidebar />
+        <MainCircle />
+        </div>
+      </div>
     </>
   );
 }

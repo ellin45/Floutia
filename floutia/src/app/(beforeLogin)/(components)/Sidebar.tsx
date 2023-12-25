@@ -8,29 +8,20 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface SidebarProps {
-  children: React.ReactNode;
-}
-
 export default function Sidebar() {
   return (
     <div className={styles.Sidebar}>
       <div className={styles.search}>
         <Image src="/search.png" alt="search" width={30} height={30}></Image>
-        <Link href="/search" style={{}}>
+        <a href="/search" className={styles.search}>
           search
-        </Link>
+        </a>
       </div>
       <div className={styles.myPage}>
         <Image src="/myPage.png" alt="myPage" width={30} height={30}></Image>
-        <Link
-          href={{
-            pathname: "/myPage",
-            query: {name: "test"},
-          }}
-          style={{color: variables.search}}>
+        <a href="/myPage" className={styles.myPage}>
           myPage
-        </Link>
+        </a>
       </div>
     </div>
   );

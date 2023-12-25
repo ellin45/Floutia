@@ -4,12 +4,13 @@ import Image from "next/image";
 
 export default function mainCircle() {
   return (
-    <div>
+    <div className={styles.mainCircle}>
       <Image
         src="/MainCircle.png"
         alt="mainCircle"
-        width={200}
-        height={200}></Image>
+        width={500}
+        height={500}>
+        </Image>
     </div>
   );
 }
