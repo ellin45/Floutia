@@ -5,17 +5,18 @@ import Header from "./(beforeLogin)/(components)/header";
 import Sidebar from "./(beforeLogin)/(components)/Sidebar";
 import MainCircle from "./(beforeLogin)/(components)/mainCircle";
 import Template from "./(beforeLogin)/(components)/Template";
-import {Children} from "react";
+import PlayList from "./(beforeLogin)/(components)/PlayList";
 
 export default function Main() {
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.body}>
         <Header />
-        <div className={styles.mainCircle}>
-        <Sidebar />
-        <MainCircle />
+        <div className={styles.main}>
+          <Sidebar />
+          <MainCircle />
         </div>
+        <PlayList />
       </div>
     </>
   );

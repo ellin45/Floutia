@@ -17,6 +17,7 @@ export default function Sidebar() {
           search
         </a>
       </div>
+
       <div className={styles.myPage}>
         <Image src="/myPage.png" alt="myPage" width={30} height={30}></Image>
         <a href="/myPage" className={styles.myPage}>

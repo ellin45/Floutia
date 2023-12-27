@@ -30,6 +30,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/auth/[...nextauth].tsx"
-  ],
+, "src/app/(beforeLogin)/(components)/mainCircle.tsx"  ],
   "exclude": ["node_modules"]
 }
