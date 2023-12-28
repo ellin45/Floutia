@@ -4,7 +4,7 @@ import variables from "../../app/styles/variables.module.scss";
 import styles from "../../styles/page.module.css";
 import Image from "next/image";
 import React, {useState} from "react";
-export default function mainCircle() {
+export default function MainCircle() {
   const imageSize = 600;
 
   const [isClick, setIsClick] = useState(true);
@@ -39,9 +39,7 @@ export default function mainCircle() {
               width={20}
               height={20}
               className={styles.heart}
-              onClick={() => setIsClick(false)}
-          
-              ></Image>
+              onClick={() => setIsClick(false)}></Image>
           ) : (
             <Image
               src="/heart-filled.svg"

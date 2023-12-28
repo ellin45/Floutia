@@ -5,28 +5,8 @@ import {useMemo} from "react";
 import variables from "../../styles/variables.module.scss";
 import styles from "../../app/styles/page.module.css";
 
-interface SidebarProps {
-  children: React.ReactNode;
+import React from "react";
+
+export default function Sidebar() {
+  return <div></div>;
 }
-
-const Sidebar: React.FC<SidebarProps> = ({children}) => {
-  const pathname = usePathname();
-  const routes = useMemo(
-    () => [
-      {
-        label: "Home",
-        active: pathname === "/",
-        href: "/",
-      },
-      {
-        label: "Search",
-        active: pathname === "/search",
-        href: "/search",
-      },
-    ],
-    []
-  );
-  return <div>{children}hihi</div>;
-};
-
-export default Sidebar;

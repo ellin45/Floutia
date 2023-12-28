@@ -3,7 +3,7 @@ import styles from "../app/styles/page.module.css";
 import Image from "next/image";
 import Header from "./(beforeLogin)/(components)/header";
 import Sidebar from "./(beforeLogin)/(components)/Sidebar";
-import MainCircle from "./(beforeLogin)/(components)/mainCircle";
+import MainCircle from "./(beforeLogin)/(components)/MainCircle";
 import Template from "./(beforeLogin)/(components)/Template";
 import PlayList from "./(beforeLogin)/(components)/PlayList";
 

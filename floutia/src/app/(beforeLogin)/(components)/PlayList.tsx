@@ -14,24 +14,7 @@ export default function playList() {
         height={30}
         className={styles.listBtn}></Image>
       <div className={styles.list}>재생목록</div>
-      <Image
-        src="/playList.png"
-        alt="playList"
-        width={30}
-        height={30}
-        className={styles.listBtn}></Image>
-      <Image
-        src="/playList.png"
-        alt="playList"
-        width={30}
-        height={30}
-        className={styles.listBtn}></Image> 
-      <Image
-        src="/playList.png"
-        alt="playList"
-        width={30}
-        height={30}
-        className={styles.listBtn}></Image>
+      
     </div>
   );
 }
