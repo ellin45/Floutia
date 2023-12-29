@@ -18,10 +18,18 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "swr": ["node_modules/swr"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/api/auth/[...nextauth].tsx"
+, "src/app/(beforeLogin)/(components)/mainCircle.tsx"  ],
   "exclude": ["node_modules"]
 }

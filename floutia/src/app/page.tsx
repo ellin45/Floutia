@@ -1,6 +1,23 @@
+import variables from "../../app/styles/variables.module.scss";
+import styles from "../app/styles/page.module.css";
 import Image from "next/image";
-import styles from "./page.module.css";
+import Header from "./(beforeLogin)/(components)/header";
+import Sidebar from "./(beforeLogin)/(components)/Sidebar";
+import MainCircle from "./(beforeLogin)/(components)/MainCircle";
+import Template from "./(beforeLogin)/(components)/Template";
+import PlayList from "./(beforeLogin)/(components)/PlayList";
 
-export default function Home() {
-  return <main className={styles.main}>main</main>;
+export default function Main() {
+  return (
+    <>
+      <div className={styles.body}>
+        <Header />
+        <div className={styles.main}>
+          <Sidebar />
+          <MainCircle />
+        </div>
+        <PlayList />
+      </div>
+    </>
+  );
 }
