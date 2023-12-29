@@ -16,7 +16,11 @@ export default function Header() {
           />
         </div>
         <div className={styles.headerColor}>OO님을 위한 곡 추천</div>
-        <button className={styles.login}>로그인</button>
+        <button className={styles.login}>
+          <a href="/login" className={styles.login_btn}>
+            Log In
+          </a>
+        </button>
       </header>
     </div>
   );

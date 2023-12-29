@@ -24,6 +24,9 @@
   flex-wrap: no-wrap;
   flex-direction: column;
 }
+.login_btn {
+  border: none;
+}
 .main {
   display: flex;
   align-items: flex-end;
