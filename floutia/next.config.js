@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   ...nextConfig,
-
+  images: {
+    domains: ["i1.sndcdn.com"],
+  },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   webpack: (config, {isServer}) => {
     if (!isServer) {
