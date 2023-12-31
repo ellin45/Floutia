@@ -9,7 +9,10 @@
 .headerColor {
   color: white;
 }
-
+.container {
+  display: flex;
+  flex-direction: flex-start;
+}
 .login {
   margin-right: 1rem;
 }
@@ -20,16 +23,20 @@
   height: 684px;
   margin-top: 20px;
   display: flex;
-  flex: 1;
   flex-wrap: no-wrap;
   flex-direction: column;
 }
 .login_btn {
   border: none;
 }
+.youtube {
+  display: flex;
+  justify-content: center;
+}
 .main {
   display: flex;
-  align-items: flex-end;
+  flex: 10;
+
   margin-left: 30px;
 }
 
@@ -117,7 +124,6 @@
 .mainCircle {
   display: flex;
   justify-content: center;
-  flex: 3;
 }
 
 @media (hover: hover) and (pointer: fine) {

@@ -10,6 +10,7 @@ import React from "react";
 
 export default function Sidebar() {
   return (
+    <div className={styles.container}>
     <div className={styles.Sidebar}>
       <div className={styles.search}>
         <Image src="/search.png" alt="search" width={30} height={30}></Image>
@@ -24,6 +25,7 @@ export default function Sidebar() {
           myPage
         </a>
       </div>
+    </div>
     </div>
   );
 }
