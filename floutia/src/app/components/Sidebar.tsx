@@ -12,9 +12,9 @@ export default function Sidebar() {
   return (
     <div className={styles.container}>
       <div className={styles.Sidebar}>
-        <div className={styles.search}>
+        <div className={styles.sidebar_search}>
           <Link legacyBehavior href="/search" passHref>
-            <a className={styles.search}>
+            <a className={styles.sidebar_search}>
               {" "}
               <Image src="/search.png" alt="search" width={30} height={30} />
               search

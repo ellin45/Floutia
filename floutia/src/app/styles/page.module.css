@@ -114,7 +114,8 @@
   display: flex;
   justify-content: center;
 }
-.search {
+
+.sidebar_search {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -127,8 +128,53 @@
   width: 90%;
   color: white;
 }
+.search_search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding-top: 25px;
+  gap: 10px;
+  text-decoration: none;
+  width: 100%;
+  background: #333;
+  border-radius: 25px;
+}
 .search_btn {
   margin-left: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding-top: 25px;
+  gap: 10px;
+  text-decoration: none;
+  width: 100%;
+  background: #333;
+  border-radius: 25px;
+}
+.search_container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+}
+.search_btn {
+  margin-left: auto;
+}
+
+.search_input {
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  line-height: 30px;
+  outline: none;
+  margin-right: 10px;
 }
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

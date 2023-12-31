@@ -11,15 +11,14 @@ import React from "react";
 export default function Search() {
   return (
     <div className={styles.search_container}>
-      <div className={styles.search}>
+      <div className={styles.search_search}>
         노래나 가수를 검색 해 보세요!
-        <div>
+        <div className={styles.search_btn}>
           <Image
             src="/search_search.png"
             alt="search_btn"
             width={30}
             height={30}
-            className={styles.search_btn}
           />
         </div>
       </div>
