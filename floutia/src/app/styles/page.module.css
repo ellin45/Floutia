@@ -36,20 +36,9 @@
 .main {
   display: flex;
   flex: 10;
-
   margin-left: 30px;
 }
 
-.search {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  color: #ffffff;
-  padding-top: 25px;
-  margin-left: 10px;
-  gap: 10px;
-  text-decoration: none;
-}
 .heart {
   margin-left: 20px;
   cursor: pointer;
@@ -80,8 +69,8 @@
   align-items: baseline;
   color: #ffffff;
   padding-top: 20px;
-  margin-left: 20px;
   text-decoration: none;
+  gap: 10px;
 }
 
 .logo {
@@ -125,7 +114,22 @@
   display: flex;
   justify-content: center;
 }
-
+.search {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: #ffffff;
+  padding-top: 25px;
+  gap: 10px;
+  text-decoration: none;
+}
+.search_container {
+  width: 90%;
+  color: white;
+}
+.search_btn {
+  margin-left: auto;
+}
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
