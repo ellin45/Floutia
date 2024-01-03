@@ -4,8 +4,6 @@ import variables from "../../styles/variables.module.scss";
 import styles from "../styles/page.module.css";
 import Search from "./components/Search";
 
-const inter = Inter({subsets: ["latin"]});
-
 import React from "react";
 
 export default function page() {
