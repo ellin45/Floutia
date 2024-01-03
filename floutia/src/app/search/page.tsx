@@ -5,7 +5,7 @@ import styles from "../styles/page.module.css";
 import Search from "./components/Search";
 
 import React from "react";
-
+import headers from "next/headers";
 export default function page() {
   return (
     <div className={styles.body}>

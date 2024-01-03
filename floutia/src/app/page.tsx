@@ -6,7 +6,6 @@ import Sidebar from "./components/Sidebar";
 import MainCircle from "./components/mainCircle";
 import Template from "./components/Template";
 import PlayList from "./components/PlayList";
-
 export default function Main() {
   return (
     <>
