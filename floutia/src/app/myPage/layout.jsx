@@ -73,7 +73,7 @@ export default function RootLayout() {
             좋아요 누른 곡
             {data.map((channel) => {
               <div key={channel.id}>
-                <Youtube
+                <YouTube
                   mySubscribers={channel.mySubscribers}
                   id={channel.id}
                   managedByMe={channel.managedByMe}
