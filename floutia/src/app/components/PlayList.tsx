@@ -5,7 +5,7 @@ import variables from "../../app/styles/variables.module.scss";
 import Image from "next/image";
 import YouTube from "react-youtube";
 
-export default function playList() {
+export default function PlayList() {
   const [volume, setVolume] = useState(0.3);
   return (
     <div className={styles.playList}>
