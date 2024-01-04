@@ -40,8 +40,8 @@ export default function MainCircle() {
         </div>
         <div className={variables.youtubeBox}>
           <YouTube
-            videoId="9JFi7MmjtGA" // defaults -> ''
-            id="BPM Entertainment" // defaults -> ''
+            videoId="D8VEhcPeSlc" // defaults -> ''
+            id="SMTOWN" // defaults -> ''
             className={variables.youtubeVideo} // defaults -> ''
             iframeClassName="" // defaults -> ''
             style={{}} // defaults -> {}
@@ -53,8 +53,8 @@ export default function MainCircle() {
         </div>
         <div className={variables.youtubeBox}>
           <YouTube
-            videoId="9JFi7MmjtGA" // defaults -> ''
-            id="BPM Entertainment" // defaults -> ''
+            videoId="eQNHDV7lKgE" // defaults -> ''
+            id="BLACKPINK" // defaults -> ''
             className={variables.youtubeVideo} // defaults -> ''
             iframeClassName="" // defaults -> ''
             style={{}} // defaults -> {}
@@ -64,7 +64,6 @@ export default function MainCircle() {
             onReady={handleReady} // defaults -> noop
           />
         </div>
-        
       </div>
     </>
   );

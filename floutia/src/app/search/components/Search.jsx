@@ -19,7 +19,7 @@ export default function Search() {
         const params = {
           q: searchQuery,
           part: "snippet",
-          maxResults: 1,
+          maxResults: 2,
           type: "video",
           regionCode: "KR",
           key: apiUrl,
