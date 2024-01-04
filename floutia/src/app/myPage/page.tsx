@@ -9,15 +9,15 @@ const inter = Inter({subsets: ["latin"]});
 
 export default function RootLayout() {
   return (
-    <div>
+    <div className={styles.logo_container}>
       <Image
-        src="/profile.jpeg"
+        src="/profile2.png"
         alt="profile"
-        width={100}
-        height={100}
+        width={80}
+        height={80}
         className={styles.logo}
       />
-      <div>OO님 반가워요</div>
+      <div> 채림 님 반가워요</div>
     </div>
   );
 }
