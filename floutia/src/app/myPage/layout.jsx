@@ -8,6 +8,7 @@ import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import axios from "axios";
 import qs from "qs";
+import YouTube from "react-youtube";
 
 export default function RootLayout() {
   const [channel, setChannel] = useState([]);

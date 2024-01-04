@@ -3,10 +3,10 @@ import React, {useState, useRef} from "react";
 import styles from "../styles/page.module.css";
 import variables from "../../app/styles/variables.module.scss";
 import Image from "next/image";
+import YouTube from "react-youtube";
 
 export default function playList() {
   const [volume, setVolume] = useState(0.3);
-  const audioRef = useRef(null); 
   return (
     <div className={styles.playList}>
       <div className={styles.list}>
@@ -56,7 +56,6 @@ export default function playList() {
             setVolume(event.target.valueAsNumber);
           }}
         />
-        
       </div>
     </div>
   );
