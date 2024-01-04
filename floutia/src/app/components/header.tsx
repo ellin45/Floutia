@@ -11,7 +11,7 @@ export default function Header() {
             src="/floutia_logo.png"
             alt="Floutia Logo"
             width={100}
-            height={100}
+            height={130}
             className={styles.logo}
           />
         </div>

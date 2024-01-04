@@ -98,8 +98,10 @@
   justify-content: center;
 }
 .logo {
-  width: 100px;
+  width: 130px;
   height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
 }
