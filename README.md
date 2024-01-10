@@ -42,6 +42,7 @@ $ npm run build
   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=t)
 - [프레임워크 및 라이브러리]:
   ![Next](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+- [배포] : ![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 - [Open API] :
   ![Youtube](https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)
 
@@ -51,8 +52,6 @@ $ npm run build
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | 메인페이지                                                         | 검색페이지                                                                |
 | <img src="./floutia/public/main.gif" width="300px" height="300px"> | <img src="./floutia/public/search_page.gif" width="300px" height="300px"> |
-
-
 
 ## Light House
 
@@ -80,6 +79,7 @@ $ npm run build
 
 &nbsp;
 마이페이지
+
 - 업데이트 예정
 
 &nbsp;
