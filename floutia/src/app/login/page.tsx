@@ -1,23 +1,28 @@
-import type {Metadata} from "next";
+"use client";
+
 import {Inter} from "next/font/google";
-import variables from "../../styles/variables.module.scss";
+import variables from "../styles/variables.module.scss";
 import styles from "../styles/page.module.css";
-import Head from "next/head";
-import Image from "next/image";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import qs from "qs";
+import type {NextApiRequest, NextApiResponse} from "next";
+import generateRandomString from "../util/generateRandomString";
+import {BASE_URL} from "../constants/path";
 
-const inter = Inter({subsets: ["latin"]});
+export default function handler(reqs: NextApiRequest, res: NextApiResponse) {
+  const state = generateRandomString(16);
 
-export default function RootLayout() {
-  return (
-    <div className={styles.logo_container}>
-      <Image
-        src="/profile2.png"
-        alt="profile"
-        width={80}
-        height={80}
-        className={styles.logo}
-      />
-      <div> 채림 님 반가워요</div>
-    </div>
-  );
+  const scope =
+    "user-read-private user-read-email user-read-playback-state user-modify-playback-state streaming";
+
+  window.location.href =
+    "https://accounts.spotify.com/authorize?" +
+    qs.stringify({
+      response_type: "code",
+      client_id: process.env.NEXT_PUBLIC_CLIENT_ID,
+      scope: scope,
+      redirect_uri: `${BASE_URL}/api/callback`,
+      state: state,
+    });
 }
