@@ -22,7 +22,7 @@ export default function handler(reqs: NextApiRequest, res: NextApiResponse) {
       response_type: "code",
       client_id: process.env.NEXT_PUBLIC_CLIENT_ID,
       scope: scope,
-      redirect_uri: `${BASE_URL}/api/callback`,
+      redirect_uri: `${BASE_URL}/callback`,
       state: state,
     });
 }

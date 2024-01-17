@@ -50,7 +50,7 @@ export const postAuthorizationCodeToken = (code: string) => {
     },
     data: {
       code: code,
-      redirect_uri: BASE_URL + "/api/callback",
+      redirect_uri: BASE_URL + "/callback",
       grant_type: "authorization_code",
     },
   });

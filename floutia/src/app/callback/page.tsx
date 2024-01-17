@@ -1,7 +1,7 @@
 import { setCookie } from 'cookies-next';
 import { NextApiRequest, NextApiResponse } from 'next';
 import qs from 'querystring';
-import { postAuthorizationCodeToken } from '../token/page';
+import { postAuthorizationCodeToken } from '../api/token';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = typeof req.query.code === 'string' ? req.query.code : null;
