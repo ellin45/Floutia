@@ -34,7 +34,7 @@ api.interceptors.request.use(
         setCookie('access_token', data.access_token, {
           maxAge: data.expires_in,
         });
-      } catch (error) {
+      } catch (error) { 
         return req;
       }
     }
