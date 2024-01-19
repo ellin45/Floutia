@@ -23,7 +23,7 @@ export default function MainCircle() {
     console.log("Player is ready");
   };
   return (
-    <>
+    <html>
       <div className={variables.youtubeContainer}>
         <div className={variables.youtubeBox}>
           <YouTube
@@ -65,6 +65,6 @@ export default function MainCircle() {
           />
         </div>
       </div>
-    </>
+    </html>
   );
 }

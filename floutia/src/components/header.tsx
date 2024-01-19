@@ -22,6 +22,7 @@ export default function Header() {
   };
 
   return (
+    
     <div>
       <header className={styles.header}>
         <div className={styles.logo}>

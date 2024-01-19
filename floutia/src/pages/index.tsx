@@ -1,10 +1,11 @@
-import variables from "../styles/variables.module.scss";
-import styles from "../styles/page.module.css";
-import Image from "next/image";
-import Header from "../components/header";
-import Sidebar from "../components/Sidebar";
-import MainCircle from "../components/mainCircle";
-import PlayList from "../components/PlayList";
+import variables from '../styles/variables.module.scss';
+import styles from '../styles/page.module.css';
+import Image from 'next/image';
+import Header from '../components/header';
+import Sidebar from '../components/Sidebar';
+import MainCircle from '../components/mainCircle';
+import PlayList from '../components/PlayList';
+
 export default function Main() {
   return (
     <>
