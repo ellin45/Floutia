@@ -10,6 +10,7 @@ import React from "react";
 
 export default function Sidebar() {
   return (
+    <html>
     <div className={styles.container}>
       <div className={styles.Sidebar}>
         <div className={styles.sidebar_search}>
@@ -33,5 +34,6 @@ export default function Sidebar() {
         </div>
       </div>
     </div>
+    </html>
   );
 }

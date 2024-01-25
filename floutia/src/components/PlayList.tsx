@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function PlayList() {
   const [volume, setVolume] = useState(0.3);
   return (
+    <html>
     <div className={styles.playList}>
       <div className={styles.list}>
         <Image
@@ -57,5 +58,6 @@ export default function PlayList() {
         />
       </div>
     </div>
+    </html>
   );
 }

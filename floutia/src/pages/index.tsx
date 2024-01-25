@@ -9,6 +9,7 @@ import PlayList from '../components/PlayList';
 export default function Main() {
   return (
     <>
+    <html>
       <div className={styles.body}>
         <Header />
         <div className={styles.main}>
@@ -17,6 +18,7 @@ export default function Main() {
         </div>
         <PlayList />
       </div>
+    </html>
     </>
   );
 }

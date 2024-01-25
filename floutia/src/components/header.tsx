@@ -22,7 +22,7 @@ export default function Header() {
   };
 
   return (
-    
+    <html>
     <div>
       <header className={styles.header}>
         <div className={styles.logo}>
@@ -43,5 +43,6 @@ export default function Header() {
         </button>
       </header>
     </div>
+    </html>
   );
 }

@@ -38,7 +38,7 @@ function App({ Component, pageProps, loginData }: MyAppProps) {
   };
 
   return (
-    <>
+    <html>
       <Head>
         <title>음악 검색</title>
         <meta name="description" content="음악 검색" />
@@ -56,7 +56,7 @@ function App({ Component, pageProps, loginData }: MyAppProps) {
           </HydrationBoundary>
         </QueryClientProvider>
       </RecoilRoot>
-    </>
+    </html>
   );
 }
 
