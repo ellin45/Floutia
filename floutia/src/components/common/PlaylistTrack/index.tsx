@@ -1,14 +1,14 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import ROUTES from 'constants/routes';
+import React, {useState} from "react";
+import styles from "../../../styles/page.module.css";
+import Image from "next/image";
+import {useRouter} from "next/router";
+import ROUTES from "constants/routes";
 
 export interface PlaylistProps {
   playlist: SpotifyApi.PlaylistObjectSimplified;
 }
 
-const Playlist = ({ playlist }: PlaylistProps) => {
+const Playlist = ({playlist}: PlaylistProps) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -16,63 +16,24 @@ const Playlist = ({ playlist }: PlaylistProps) => {
   };
 
   return (
-    <S.Container>
+    <div className={styles.playList}>
       <Image
         src={playlist.images[0].url}
         alt="플레이리스트 이미지"
         width={260}
         height={260}
-        css={css`
-          border-radius: 5px;
-        `}
+        
       />
-      <S.Info>
-        <S.Name>{playlist.name}</S.Name>
-        <S.Description
-          dangerouslySetInnerHTML={{ __html: playlist.description ?? '' }}
-        ></S.Description>
-        <S.Button onClick={handleClick}>바로가기</S.Button>
-      </S.Info>
-    </S.Container>
+      <div>
+        <div>{playlist.name}</div>
+        <div>
+          dangerouslySetInnerHTML={{
+            __html: playlist.description ?? "",
+          }}</div>
+        <div onClick={handleClick}>바로가기</div>
+      </div>
+    </div>
   );
-};
-
-const S = {
-  Container: styled.div`
-    display: flex;
-    width: 550px;
-    height: 300px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: ${({ theme }) => theme.colors.darkgray};
-  `,
-  Info: styled.div`
-    position: relative;
-    width: 100%;
-    margin-left: 10px;
-  `,
-  Name: styled.h2`
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: 700;
-  `,
-  Description: styled.p`
-    line-height: 1.2;
-    color: ${({ theme }) => theme.colors.lightgray};
-  `,
-  Button: styled.button`
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 130px;
-    height: 50px;
-    background-color: ${({ theme }) => theme.colors.white};
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-  `,
 };
 
 export default Playlist;

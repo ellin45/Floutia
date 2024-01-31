@@ -30,7 +30,11 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/api/auth/[...nextauth].tsx",
-    "src/(beforeLogin)/components/mainCircle.tsx"
-, "src/(beforeLogin)/components/PlayList.tsx", "src/(beforeLogin)/components/Sidebar.tsx", "src/(beforeLogin)/components/login.jsx", "src/myPage/layout.jsx"  ],
+    "src/(beforeLogin)/components/mainCircle.tsx",
+    "src/(beforeLogin)/components/PlayList.tsx",
+    "src/(beforeLogin)/components/Sidebar.tsx",
+    "src/(beforeLogin)/components/login.jsx",
+    "src/myPage/layout.jsx"
+  ],
   "exclude": ["node_modules"]
 }
