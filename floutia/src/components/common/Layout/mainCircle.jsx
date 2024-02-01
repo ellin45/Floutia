@@ -4,6 +4,8 @@ import React, {useState, useEffect} from "react";
 import {useSetRecoilState, useRecoilState} from "recoil";
 import styles from "../../../styles/page.module.css";
 import {searchQueryState, searchValueState} from "recoil/atoms";
+import Image from "next/image";
+
 // import YouTube from "react-youtube";
 
 // export default function MainCircle() {
@@ -82,7 +84,7 @@ const SearchInput = ({...props}) => {
     fetchData(searchQuery);
   };
   const handleChange = (event) => {
-    setSearchQuery(event.target.value);
+    setValue(event.target.value);
   };
   return (
     <>
@@ -91,13 +93,22 @@ const SearchInput = ({...props}) => {
           <div className={styles.search_search}>
             <input
               type="text"
-              value={searchQuery}
+              value={value}
               onKeyPress={handleKeyPress}
               onChange={handleChange}
               placeholder="노래나 가수를 검색 해 보세요!"
               className={styles.search_input}
+              {...props}
             />
-            <div className={styles.search_btn} onClick={handleClick}></div>
+            <div className={styles.search} onClick={handleClick}>
+              <Image
+                src="/search.png"
+                alt="Floutia Logo"
+                width={20}
+                height={20}
+                className={styles.search_btn}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -164,7 +164,6 @@
 .search_search {
   display: flex;
   align-items: center;
-  padding-top: 20px;
   justify-content: space-between;
   color: #ffffff;
   gap: 10px;
@@ -178,6 +177,7 @@
 .search_btn {
   margin-left: auto;
   margin-right: 15px;
+  margin-top: 20px;
   display: flex;
   align-items: flex-start;
 }
@@ -187,7 +187,6 @@
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
-  padding-top: 25px;
   gap: 10px;
   text-decoration: none;
   width: 100%;
