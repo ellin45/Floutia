@@ -1,39 +1,47 @@
 import React, {useState} from "react";
 import styles from "../../../styles/page.module.css";
 import Image from "next/image";
-import {useRouter} from "next/router";
-import ROUTES from "constants/routes";
+import { useRecoilValue } from 'recoil';
+import { usePostPlaybackQueue } from 'hooks/mutations/me';
+import { loginDataState } from 'recoil/atoms';
 
-export interface PlaylistProps {
-  playlist: SpotifyApi.PlaylistObjectSimplified;
+
+interface PlaylistTrackProps {
+  track: SpotifyApi.TrackObjectFull;
 }
 
-const Playlist = ({playlist}: PlaylistProps) => {
-  const router = useRouter();
+const PlaylistTrack = ({ track }: PlaylistTrackProps) => {
+  const loginData = useRecoilValue(loginDataState);
+  const { mutate } = usePostPlaybackQueue();
 
-  const handleClick = () => {
-    router.push(ROUTES.PLAYLIST(playlist.id));
+  const handlePlay = () => {
+    if (!loginData) return alert('로그인이 필요합니다.');
+
+    mutate({ uri: track.uri });
   };
+
 
   return (
     <div className={styles.playList}>
-      <Image
-        src={playlist.images[0].url}
-        alt="플레이리스트 이미지"
-        width={260}
-        height={260}
-        
-      />
-      <div>
-        <div>{playlist.name}</div>
+       <div
+       
+      >
+        <Image
+          src={track.album.images[2].url}
+          alt={track.name}
+          width={64}
+          height={64}
+         
+        />
         <div>
-          dangerouslySetInnerHTML={{
-            __html: playlist.description ?? "",
-          }}</div>
-        <div onClick={handleClick}>바로가기</div>
+          <title>{track.name}</title>
+          <div>{track.artists.map((artist) => artist.name).join(', ')}</div>
+        </div>
       </div>
+      <div>{track.album.name}</div>
+      <Image src="/images/play.svg" alt="artist" width={24} height={24} onClick={handlePlay} />
     </div>
   );
 };
 
-export default Playlist;
+export default PlaylistTrack;

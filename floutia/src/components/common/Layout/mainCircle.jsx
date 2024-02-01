@@ -74,18 +74,21 @@ const SearchInput = ({...props}) => {
   const [value, setValue] = useRecoilState(searchValueState);
   const setQuery = useSetRecoilState(searchQueryState);
   const [searchQuery, setSearchQuery] = useState("");
-  const [playlist, setPlaylist] = useState([]);
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      fetchData(event.target.value);
-    }
-  };
-  const handleClick = () => {
-    fetchData(searchQuery);
-  };
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+
+  const handleClick = (event) => {
+    setSearchQuery(searchQuery);
+    if (event.key === "Enter") {
+      setValue(event.target.value);
+    }
+  };
+
+  useEffect(() => {
+    setQuery(value);
+  }, [setQuery]);
   return (
     <>
       <div className={styles.body}>
@@ -94,19 +97,19 @@ const SearchInput = ({...props}) => {
             <input
               type="text"
               value={value}
-              onKeyPress={handleKeyPress}
               onChange={handleChange}
               placeholder="노래나 가수를 검색 해 보세요!"
               className={styles.search_input}
               {...props}
             />
-            <div className={styles.search} onClick={handleClick}>
+            <div className={styles.search}>
               <Image
                 src="/search.png"
                 alt="Floutia Logo"
                 width={20}
                 height={20}
                 className={styles.search_btn}
+                onClick={handleClick}
               />
             </div>
           </div>
