@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react";
 import {useSetRecoilState, useRecoilState} from "recoil";
 import styles from "../../../styles/page.module.css";
 import {searchQueryState, searchValueState} from "recoil/atoms";
+import useDebounce from "hooks/useDebounce";
 import Image from "next/image";
 
 // import YouTube from "react-youtube";
@@ -71,24 +72,22 @@ import Image from "next/image";
 // }
 
 const SearchInput = ({...props}) => {
-  const [value, setValue] = useRecoilState(searchValueState);
-  const setQuery = useSetRecoilState(searchQueryState);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
 
-  const handleClick = (event) => {
-    setSearchQuery(searchQuery);
-    if (event.key === "Enter") {
-      setValue(event.target.value);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      // 엔터 키가 눌렸을 때 onSearch 함수 호출
+      onSearch(value);
     }
   };
-
-  useEffect(() => {
-    setQuery(value);
-  }, [setQuery]);
+  const handleSearch = (searchValue) => {
+    console.log("검색어:", searchValue);
+    // 여기에 검색을 수행하는 코드를 추가할 수 있습니다.
+  };
   return (
     <>
       <div className={styles.body}>
@@ -98,6 +97,7 @@ const SearchInput = ({...props}) => {
               type="text"
               value={value}
               onChange={handleChange}
+              onKeyDown={handleKeyDown} // 엔터 키 이벤트 핸들러 추가
               placeholder="노래나 가수를 검색 해 보세요!"
               className={styles.search_input}
               {...props}
@@ -109,7 +109,7 @@ const SearchInput = ({...props}) => {
                 width={20}
                 height={20}
                 className={styles.search_btn}
-                onClick={handleClick}
+                onClick={()=>{handleSearch}} // 검색 버튼 클릭 시 검색 실행
               />
             </div>
           </div>

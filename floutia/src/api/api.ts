@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getCookie, setCookie } from 'cookies-next';
 import { postRefreshToken, postClientCredentialsToken } from './token';
-import { BASE_API_URL } from '../constants/path';
+import { BASE_API_URL } from 'constants/path';
 
 const api = axios.create({
   baseURL: BASE_API_URL,

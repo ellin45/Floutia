@@ -5,21 +5,23 @@ import { useRecoilValue } from 'recoil';
 import { usePostPlaybackQueue } from 'hooks/mutations/me';
 import { loginDataState } from 'recoil/atoms';
 
-
 interface PlaylistTrackProps {
   track: SpotifyApi.TrackObjectFull;
 }
 
+interface Uri {
+  uri: string;
+}
+
 const PlaylistTrack = ({ track }: PlaylistTrackProps) => {
   const loginData = useRecoilValue(loginDataState);
-  const { mutate } = usePostPlaybackQueue();
+  const { mutate } = usePostPlaybackQueue(); // Pass Uri as a generic parameter
 
   const handlePlay = () => {
     if (!loginData) return alert('로그인이 필요합니다.');
 
-    mutate({ uri: track.uri });
+    mutate({ uri: track.uri }); // Correct the syntax when calling mutate
   };
-
 
   return (
     <div className={styles.playList}>

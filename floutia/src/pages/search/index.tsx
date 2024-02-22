@@ -34,8 +34,7 @@ const SearchPage = () => {
   interface DataWrapper {
     data: SearchData;
   }
-  const {data: rawData} = useGetSearchAll(query);
-  const data = rawData as DataWrapper;
+  const {data} = useGetSearchAll(query);
   console.log("data", {data});
   if (!query)
     return (
@@ -92,3 +91,5 @@ const SearchPage = () => {
     </div>
   );
 };
+
+export default SearchPage;
