@@ -16,7 +16,7 @@ const PlaylistTrack = ({track}: PlaylistTrackProps) => {
   const handlePlay = () => {
     if (!loginData) return alert("로그인이 필요합니다.");
 
-    mutate({uri: track.uri}); 
+    mutate({uri : track.uri});
   };
 
   return (
